@@ -1,5 +1,5 @@
 ---
-title: "Atididade 4"
+title: "Atividade 4"
 author: "Marina Méga"
 date: "16/05/2022"
 output: html_document
