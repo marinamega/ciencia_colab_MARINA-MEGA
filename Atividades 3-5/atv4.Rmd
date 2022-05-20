@@ -306,4 +306,26 @@ Por fim, os dados foram guardados:
 write.csv(all_data, "atidade3_MarinaMega.csv", row.names = FALSE) 
 ```
 
+### 4. ANÁLISE EXPLORATÓRIA
+Para a análise exploratória foi realizado um histograma a fim de verificar a distribuição latitudinal de _L. subrugosa_ 
 
+```{r análise exploratória}
+library(tidyverse)
+library(viridis)
+
+hist<- all_data %>%
+  ggplot( aes(x=decimalLatitude)) +
+  geom_histogram( binwidth=1, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
+  ggtitle("Distribuição Latitudinal de Lottia subrugosa") +
+  theme_classic()+
+  labs(x="Latitude",
+       y="Ocorrência") +
+  scale_x_continuous(breaks = seq(-40, 0, 5)) +
+  theme(
+    plot.title = element_text(size=15)
+  )
+
+  hist + scale_y_continuous(expand = expansion(add = c(0,5)))
+```
+
+Verifique que a maior ocorrência da espécie ocorre próxima a latitude 23º, que compreende parte do litoral paulista (aproximadamente de Santos à Picinguaba) e parte do litoral fluminense (aproximadamente de Paraty à cidade do Rio de Janeiro). Podemos ver esse padrão, também, no mapa interativo acima, onde tem alta concentração de pontos especialmente na região de Angra dos Reis.
