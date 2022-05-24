@@ -306,7 +306,6 @@ Por fim, os dados foram guardados:
 write.csv(all_data, "atividade3_MarinaMega.csv", row.names = FALSE) 
 ```
 
-
 ### 4. ANÁLISE EXPLORATÓRIA
 Para a análise exploratória foi realizado um histograma a fim de verificar a distribuição latitudinal de _L. subrugosa_ 
 
